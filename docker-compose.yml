@@ -1,0 +1,13 @@
+version: "2"
+services:
+  commserver:
+    build: .
+    user: "root"
+    working_dir: /home/node/app
+    environment:
+      - NODE_ENV=production
+    container_name: commserver
+    restart: always
+    ports:
+      - 3939:3939
+
